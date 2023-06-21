@@ -19,7 +19,7 @@ O Design do banco de dados:
  
 O Projeto ImageUpload se parece com a figura seguinte:
 
-![ImageUploaderMVC home page screenshot](Documents/Arquitetura.drawio)
+![ImageUploaderMVC home page screenshot](Documents/Arquitetura.png)
 
 Na página inicial, o usuário verá a lista de todas as imagens guardas no blob store e algumas de suas propriedades como Nome, Descrição e URL.
 Nesta página é permitido adicionar, deletar, modificar e ver detalhes de uma determinada imagem.
