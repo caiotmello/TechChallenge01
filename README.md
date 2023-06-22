@@ -5,10 +5,12 @@ adicionar imagens que serão armazenadas no Azure blob Storage e suas referencia
 
 
 Abaixo é possível verificar a arquitetura da Applicação
+
 ![ImageUploaderMVC Arquitetura](Documents/Arquitetura.drawio.png)
 
 
-Para conexão com o banco de dados foi utilizado Entity Framework Core e desenvolvido um CRUD com Repository pattern + unityOfWork pattenr. Design do banco de dados:
+Para conexão com o banco de dados foi utilizado Entity Framework Core e desenvolvido um CRUD com Repository pattern + unityOfWork pattern. Design do banco de dados:
+
 ![ImageUploaderMVC Banco de Dados](Documents/BancoDeDados.drawio.png)
 
 
@@ -26,7 +28,10 @@ Caso o usuário queira adicionar uma imagem basta selecionar o botão CREATE e c
 ![ImageUploaderMVC Create page screenshot](Documents/CreateView.png)
 
 
-### Configuração do Azure
+## Pré-Requisitos
+1. .NET6
+
+## Configuração do Azure
 1. Para configurar a infraestrutura do Azure (BlobStorage, SQL Server Azure e WebApp) foi criado dois scripts .bat para serem rodados.
 1. Primeiramente, O script `DeployAzureInfra.bat` é responsável por criar toda a infraestrutura no azure para a aplicação rodar. Porém antes de executa-ló, é necessário alterar alguns parâmetros de configuração das infrastruturas criadas no Azure como por exemplo o nome do \_Resosurce Group, DatabaseName, ServerName, WebServiceName\_ de acordo com sua necessidade.
     - `<RESOURCE_GROUP_NAME>` = Nome do Resource group
@@ -57,7 +62,7 @@ Caso o usuário queira adicionar uma imagem basta selecionar o botão CREATE e c
     ```
     __NOTA__: Verificar se o blob container foi criado no azure. Caso negativo verificar capítulo (Erros Comuns). 
 
-### Upload da aplicação no Azure
+## Upload da aplicação no Azure
 1. Para fazer o upload da aplicação da aplicação no WebApp do Azure primeiramente é necessário alterar os parâmetros de acordo com o já configurado no azure
     - `<RESOURCE_GROUP_NAME>` = Nome do Resource group (Mesmo configurado no script `DeployAzureInfra.bat`).
     - `<WEBAPP_NAME>` = Nome do WebApp (Mesmo configurado no script `DeployAzureInfra.bat`).
