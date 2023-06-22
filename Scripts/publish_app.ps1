@@ -1,9 +1,12 @@
+param (
+    $resource_group,
+    $webapp_name
+)
+
 $DateTime = Get-Date
 'Horario Inicial: ' + $DateTime
 
 $dirPublish = "publicacao"
-$webapp_name = "caiomello-techchallenge01"
-$resource_group = "rg-techchallenge01"
 
 # Força a exclusão de uma pasta para publicação criada anteriormente
 if (Test-Path $dirPublish) {
